@@ -20,16 +20,19 @@ print("Total Pay = $", total_pay)
 # A student can be enrolled to a class only if the class is not full 
 # and the class schedule does not conflict with her current schedule.
 
-# The student would have to have a variable assigned to her schedule and the class schedule
-# the code would be something along the lines of 
-# current != class and class_aval < max(class_aval)
+class_not_full = True
+no_schedule_conflict = False
+can_enroll = class_not_full and no_schedule_conflict
 
 # A product offer can be applied only if people buys more than 2 items, 
 # and the offer has not expired. 
 # Premium members do not need to buy a specific amount of products.
 
-# offer > 2 and offer < now() ?
-# if preminum_member then offer < now()
+pre_mem = True
+more_then_2_items = False
+not_expired = True
+
+not_expired and (more_then_2_items or pre_mem)
 
 # Create a variable that holds a boolean value for each of the following conditions:
 
@@ -38,10 +41,17 @@ print("Total Pay = $", total_pay)
 # the password must not be the same as the username
 # bonus neither the username or password can start or end with whitespace
 
+pass_more_then_four = (len(password) > 4)
+user_less_then_21 = len(username) <= 20
+user_pass = username != password
+no_whitespace = username == username.strip()
+passed = no_whitespace and user_pass and\
+user_less_then_21 and pass_more_then_four
+
 username = 'codeup'
-if len(username) <= 20 False
-else true
+# if len(username) <= 20 False
+# else true
 password = 'notastrongpassword'
-if len(password) < 5 False
-else true
-username != password
+# if len(password) < 5 False
+# else true
+# username != password
